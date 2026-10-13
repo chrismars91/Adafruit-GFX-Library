@@ -9,8 +9,8 @@
 #endif
 #include "gfxfont.h"
 
-#include <Adafruit_I2CDevice.h>
-#include <Adafruit_SPIDevice.h>
+// #include <Adafruit_I2CDevice.h>
+// #include <Adafruit_SPIDevice.h>
 
 /// A generic graphics superclass that can handle all sorts of drawing. At a
 /// minimum you can subclass and provide drawPixel(). At a maximum you can do a
@@ -193,7 +193,7 @@ public:
 #if ARDUINO >= 100
   virtual size_t write(uint8_t);
 #else
-  virtual void write(uint8_t);
+  virtual size_t write(uint8_t);
 #endif
 
   /************************************************************************/
